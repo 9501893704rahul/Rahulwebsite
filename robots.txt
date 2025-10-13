@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rahulthakur.dev/sitemap.xml
+
+# Disallow certain directories
+Disallow: /assets/private/
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Allow important files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/Rahul_Thakur_Resume.pdf

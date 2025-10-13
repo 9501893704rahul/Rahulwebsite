@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Thakur - .NET Angular Developer & AI Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        .logo span {
+            color: #3498db;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #3498db;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0 100px;
+            margin-top: 70px;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #667eea;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 5px solid white;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #777;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+        }
+
+        /* About Section */
+        .about {
+            background: #fff;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .detail-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #f8f9fa;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category h3 i {
+            color: #3498db;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .skill-tag.required {
+            background: #2c3e50;
+            font-weight: 600;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #fff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #777;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .project-tech span {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            margin-top: 20px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: #f8f9fa;
+        }
+        
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+        
+        .reviews-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .review-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .review-card h4 {
+            font-size: 1rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .review-card span {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .review-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .review-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #fff;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .timeline-date {
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-content h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h4 {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+        }
+
+        .timeline-content li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form .contact-note {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Rahul <span>Thakur</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Rahul Thakur</h1>
+                    <h2>.NET Angular Developer & AI Engineer</h2>
+                    <p>Dynamic and results-driven developer with a passion for crafting efficient, scalable, and user-centric web applications. Currently contributing to critical software solutions at IIT Mandi.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Dynamic and results-driven .NET Angular Developer with a passion for crafting efficient, scalable, and user-centric web applications. Leveraging expertise in .NET technologies and proficiency in Angular framework, I aim to contribute my skills to a forward-thinking team dedicated to delivering high-quality software solutions.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <strong>Location:</strong> Una, Himachal Pradesh
+                        </div>
+                        <div class="detail-item">
+                            <strong>Experience:</strong> 2+ Years at IIT Mandi
+                        </div>
+                        <div class="detail-item">
+                            <strong>Education:</strong> M.Tech Computer Science
+                        </div>
+                        <div class="detail-item">
+                            <strong>Availability:</strong> Open to Opportunities
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Core Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag required">C#</span>
+                        <span class="skill-tag required">.NET</span>
+                        <span class="skill-tag required">.NET Core</span>
+                        <span class="skill-tag required">ASP.NET</span>
+                        <span class="skill-tag">MVC</span>
+                        <span class="skill-tag">Entity Framework</span>
+                        <span class="skill-tag">xUnit</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-globe"></i> Web & APIs</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag required">REST</span>
+                        <span class="skill-tag">Web services</span>
+                        <span class="skill-tag">APIs</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-database"></i> Databases & DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Microsoft SQL Server</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cogs"></i> Development Practices</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Software development</span>
+                        <span class="skill-tag">Unit testing</span>
+                        <span class="skill-tag">Debugging</span>
+                        <span class="skill-tag">Continuous integration</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Jenkins</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-users"></i> Professional Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Enterprise Software</span>
+                        <span class="skill-tag">Communication skills</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- IIT Mandi Recruitment Portal -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>IIT Mandi Recruitment Portal</h3>
+                        <p>High-traffic portal for faculty and staff recruitment using ASP.NET Webforms with 3-layer architecture. Handles the entire recruitment process for the institute.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Webforms</span>
+                            <span>C#</span>
+                            <span>MS SQL</span>
+                            <span>3-Layer Architecture</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://oas.iitmandi.ac.in/instituteprocess/hr/Default.aspx" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Institute Process Solution -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Institute Process Solution</h3>
+                        <p>Comprehensive system maintenance for institute-wide processes and workflows. Centralized platform for various administrative operations.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Webforms</span>
+                            <span>3-Layer Architecture</span>
+                            <span>C#</span>
+                            <span>MS SQL Server</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://oas.iitmandi.ac.in/instituteprocess/common/login.aspx" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guest House Booking System -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>IIT Guest House Booking System</h3>
+                        <p>Maintenance and enhancement of guest house reservation system for IIT Mandi. Streamlines booking process for visitors and staff.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Webforms</span>
+                            <span>3-Layer Architecture</span>
+                            <span>MS SQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://oas.iitmandi.ac.in/OASGuestHouse/Common/Login.aspx" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shortstory Web App -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Shortstory Web App</h3>
+                        <p>Full-stack application built with ASP.NET Core 6 and Angular 8 for story sharing platform. Features user authentication and content management.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Core 6</span>
+                            <span>Angular 8</span>
+                            <span>Entity Framework</span>
+                            <span>RESTful APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="http://shortstory.manzoorthetrainer.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PG Application Result Portal -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>PG Application Result Portal</h3>
+                        <p>Portal for displaying postgraduate application results with secure access controls. Provides real-time updates for applicants.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET</span>
+                            <span>C#</span>
+                            <span>MS SQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://oas.iitmandi.ac.in/External/Admission/result.aspx" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Information System -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Employee Information System</h3>
+                        <p>Comprehensive system for managing employee data with AngularJS frontend and .NET Web APIs backend. Features role-based access control.</p>
+                        <div class="project-tech">
+                            <span>AngularJS</span>
+                            <span>.NET Web APIs</span>
+                            <span>EF Code First</span>
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://oas.iitmandi.ac.in/student/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View System
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">
+                Client Reviews 
+                <span style="font-size:1.2rem; color:#3498db;">⭐ 4.9 · 10 Reviews</span>
+            </h2>
+            <p style="text-align:center; margin-bottom:30px;">
+                Verified on 
+                <a href="https://www.freelancer.com/u/rahuliitmandi202" target="_blank" style="color:#3498db; font-weight:600;">
+                    Freelancer.com Profile
+                </a>
+            </p>
+            <div class="reviews-list">
+                <div class="review-card fade-in">
+                    <p>"Great Work from the freelancer"</p>
+                    <h4>Custom A* Pathfinding for AI Guard • $30 USD</h4>
+                    <span>- Tariq H. (Dubai, UAE)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183467&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Everything perfect on project part!"</p>
+                    <h4>PowerBI/Data Engineer/SQL Analysis • €9 EUR</h4>
+                    <span>- Esad K. (Bosnia & Herzegovina)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183468&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Work is good and on time"</p>
+                    <h4>.NET Specialist for Back-end & Database • ₹1,501 INR</h4>
+                    <span>- Former Client</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183469&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Very good and detailed work by the developer. More projects are coming soon."</p>
+                    <h4>SmartSimple Cloud Developer • $30 CAD</h4>
+                    <span>- Sahil M. (India)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183470&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Awesome work, very good communication skills"</p>
+                    <h4>Airtable Python Script • $60 USD</h4>
+                    <span>- Ciprian L. (Romania)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183471&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Rahul delivered the project on time and with the required features."</p>
+                    <h4>Web App in Angular + Flask • $80 USD</h4>
+                    <span>- Carlos Adolfo I. (Peru)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183472&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"This guy is professional and delivered exact requirements"</p>
+                    <h4>YOLOv5 Dataset Training • $30 USD</h4>
+                    <span>- Mustafa E. (Egypt)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183473&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Delivered as expected, advised improvements and made it better"</p>
+                    <h4>SQL Database • €25 EUR</h4>
+                    <span>- Nejc B. (Slovenia)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183474&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+                <div class="review-card fade-in">
+                    <p>"Great work done by Rahul"</p>
+                    <h4>Migrate Access DB to Power BI • $30 USD</h4>
+                    <span>- Rohit S. (UAE)</span><br>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202?review_context_id=37183475&review_type=project&sb=t" target="_blank" class="review-link">🔗 View on Freelancer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">April 2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Project Associate (Ad-hoc)</h3>
+                        <h4>IIT Mandi - Indian Institute of Technology</h4>
+                        <ul>
+                            <li>Developed and maintained 5+ critical institute-wide applications serving thousands of users</li>
+                            <li>Engineered features for the IIT Mandi Recruitment Portal using C# ASP.NET Webforms</li>
+                            <li>Maintained Guest House Booking System with 3-layer architecture</li>
+                            <li>Contributed to full-stack development using .NET Core and Angular</li>
+                            <li>Implemented secure authentication and authorization systems</li>
+                            <li>Collaborated with cross-functional teams to deliver high-quality software solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 9501893704</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Rahulthakurhm@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Una, Himachal Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-link"></i>
+                        <div>
+                            <h3>Freelancer Profile</h3>
+                            <p><a href="https://www.freelancer.com/u/rahuliitmandi202" target="_blank">https://www.freelancer.com/u/rahuliitmandi202</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="contact-note">
+                        <p><strong>Direct Contact:</strong> Please use the contact information provided to reach out directly. I typically respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Rahul Thakur. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.freelancer.com/u/rahuliitmandi202" target="_blank"><i class="fas fa-briefcase"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('header');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = '#fff';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Check on load and scroll
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>

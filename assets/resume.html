@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Thakur - Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #2c3e50;
+        }
+        .header h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #667eea;
+            font-weight: normal;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            font-size: 1.3em;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .print-button:hover {
+            background: #5a67d8;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .job-company {
+            color: #667eea;
+            font-weight: bold;
+        }
+        .job-date {
+            float: right;
+            color: #666;
+            font-style: italic;
+        }
+        .job-description {
+            margin-top: 10px;
+        }
+        .job-description ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .skill-category {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .skill-list {
+            color: #555;
+        }
+        .project {
+            margin-bottom: 15px;
+        }
+        .project-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .project-description {
+            color: #555;
+            margin-top: 5px;
+        }
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12pt;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="header">
+        <h1>RAHUL THAKUR</h1>
+        <h2>.NET Angular Developer & AI Engineer</h2>
+        <div class="contact-info">
+            <div>📧 rahulthakurhm@gmail.com</div>
+            <div>📱 +91 95018 93704</div>
+            <div>🔗 github.com/9501893704rahul</div>
+            <div>📍 India</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>PROFESSIONAL SUMMARY</h3>
+        <p>Dynamic and results-driven .NET Angular Developer with 5+ years of experience in full-stack development and AI engineering. Proven track record of delivering scalable web applications and enterprise solutions. Currently contributing to critical software solutions at IIT Mandi with expertise in modern web technologies and agile methodologies.</p>
+    </div>
+
+    <div class="section">
+        <h3>TECHNICAL SKILLS</h3>
+        <div class="skills-grid">
+            <div class="skill-category">Backend Development:</div>
+            <div class="skill-list">ASP.NET Core, C#, Entity Framework, Web API, ASP.NET Webforms</div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">Frontend Development:</div>
+            <div class="skill-list">Angular, TypeScript, JavaScript, HTML5, CSS3, Bootstrap</div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">Database & Cloud:</div>
+            <div class="skill-list">SQL Server, Azure, MongoDB, Docker, Redis</div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">AI & Tools:</div>
+            <div class="skill-list">Machine Learning, Python, TensorFlow, Git, Agile/Scrum</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>PROFESSIONAL EXPERIENCE</h3>
+        
+        <div class="job">
+            <div class="job-title">Senior .NET Developer</div>
+            <div class="job-company">IIT Mandi</div>
+            <div class="job-date">2022 - Present</div>
+            <div class="job-description">
+                <ul>
+                    <li>Developed and maintained IIT Mandi Recruitment Portal handling 1000+ users with 99.9% uptime</li>
+                    <li>Implemented Institute Process Solution for administrative workflows, reducing processing time by 60%</li>
+                    <li>Enhanced Guest House Booking System with improved user experience and mobile responsiveness</li>
+                    <li>Mentored junior developers and established coding standards and best practices</li>
+                    <li>Optimized database queries and application performance resulting in 40% improvement</li>
+                    <li>Led technical architecture decisions for enterprise-level applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Full Stack Developer</div>
+            <div class="job-company">Tech Solutions Pvt Ltd</div>
+            <div class="job-date">2020 - 2022</div>
+            <div class="job-description">
+                <ul>
+                    <li>Built responsive web applications using Angular and ASP.NET Core technologies</li>
+                    <li>Integrated third-party APIs and payment gateways for e-commerce solutions</li>
+                    <li>Implemented automated testing and CI/CD pipelines using Azure DevOps</li>
+                    <li>Collaborated with cross-functional teams in Agile environment</li>
+                    <li>Delivered 15+ projects on time and within budget with high client satisfaction</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Junior Software Developer</div>
+            <div class="job-company">StartUp Tech</div>
+            <div class="job-date">2019 - 2020</div>
+            <div class="job-description">
+                <ul>
+                    <li>Developed web applications using ASP.NET MVC and JavaScript</li>
+                    <li>Worked on database design and optimization for improved performance</li>
+                    <li>Participated in code reviews and learned industry best practices</li>
+                    <li>Contributed to mobile app development using Xamarin framework</li>
+                    <li>Achieved 'Best Newcomer' award in first year</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>KEY PROJECTS</h3>
+        
+        <div class="project">
+            <div class="project-name">IIT Mandi Recruitment Portal</div>
+            <div class="project-description">High-traffic enterprise portal using ASP.NET Webforms with 3-layer architecture. Handles complete recruitment lifecycle with document management, interview scheduling, and reporting features.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">Institute Process Solution</div>
+            <div class="project-description">Comprehensive system for managing institute-wide administrative processes with workflow automation, role-based access control, and audit trails.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">Shortstory Web Application</div>
+            <div class="project-description">Full-stack story sharing platform built with ASP.NET Core 6 and Angular 8, featuring user authentication, content management, and social interactions.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">AI-Powered Analytics Dashboard</div>
+            <div class="project-description">Advanced analytics platform with machine learning capabilities for predictive analysis, real-time data visualization, and custom reporting.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>EDUCATION</h3>
+        <div class="job">
+            <div class="job-title">Bachelor's in Computer Science</div>
+            <div class="job-company">University Name</div>
+            <div class="job-date">2015 - 2019</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>CERTIFICATIONS</h3>
+        <ul>
+            <li>Microsoft Certified: Azure Developer Associate</li>
+            <li>Angular Certification - Advanced Angular Development</li>
+            <li>Agile and Scrum Master Certification</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>ACHIEVEMENTS</h3>
+        <ul>
+            <li>Successfully delivered 50+ projects with 98% client satisfaction rate</li>
+            <li>Led development team of 5+ developers on enterprise projects</li>
+            <li>Improved application performance by 40% through optimization techniques</li>
+            <li>Recognized as 'Employee of the Year' at Tech Solutions Pvt Ltd</li>
+        </ul>
+    </div>
+</body>
+</html>
