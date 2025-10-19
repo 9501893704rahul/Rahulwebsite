@@ -11,6 +11,7 @@
   },
   "about": {
     "overview": "I am a passionate and experienced .NET Angular Developer with a strong background in full-stack development and AI engineering. With over 5 years of experience in the industry, I specialize in creating robust, scalable web applications using cutting-edge technologies.",
+    "description": "Experienced .NET Angular Developer with expertise in full-stack development, AI integration, and modern web technologies. Passionate about creating scalable, user-friendly applications.",
     "details": {
       "name": "Rahul Thakur",
       "experience": "5+ Years",
@@ -22,13 +23,10 @@
         "title": "Bachelor's in Computer Science",
         "institution": "University Name",
         "period": "2015-2019"
-      },
-      {
-        "title": "Microsoft Certified Developer",
-        "institution": "Azure & .NET Technologies",
-        "period": ""
       }
-    ]
+    ],
+    "certifications": [],
+    "keyStrengths": []
   },
   "skills": [
     {
@@ -84,21 +82,83 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "id": 1,
-      "title": "Test Project",
-      "description": "A test project",
-      "technologies": [
-        "React",
-        "Node.js"
-      ],
-      "image": "",
-      "link": "",
-      "github": ""
-    }
-  ],
-  "experience": [],
+  "projects": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "Test Project",
+        "description": "A test project",
+        "technologies": [
+          "React",
+          "Node.js"
+        ],
+        "image": "",
+        "link": "",
+        "github": ""
+      },
+      {
+        "id": 1760861549422.9736,
+        "title": "Portfolio Website",
+        "description": "A modern portfolio website showcasing my skills and projects with admin panel for content management.",
+        "image": "",
+        "category": "Web Apps",
+        "status": "LIVE",
+        "technologies": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "features": [
+          "Responsive design",
+          "Admin panel",
+          "Content management",
+          "Project showcase",
+          "Contact form"
+        ],
+        "liveUrl": "https://rahulthakur.dev",
+        "githubUrl": "https://github.com/9501893704rahul/Rahulwebsite",
+        "stats": {
+          "users": "500+ Visitors",
+          "duration": "3 months",
+          "type": "Personal Portfolio"
+        }
+      }
+    ]
+  },
+  "experience": {
+    "experiences": [
+      {
+        "id": 1760861695258.0037,
+        "position": "Senior Full Stack Developer",
+        "company": "Tech Solutions Inc",
+        "location": "New York, USA",
+        "duration": "2022 - Present",
+        "type": "Full-time",
+        "description": "Leading development of scalable web applications using modern technologies. Responsible for architecture decisions and mentoring junior developers.",
+        "responsibilities": [
+          "Developed and maintained full-stack web applications",
+          "Led a team of 5 developers",
+          "Implemented CI/CD pipelines",
+          "Designed system architecture"
+        ],
+        "technologies": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "MongoDB",
+          "AWS",
+          "Docker"
+        ],
+        "achievements": [
+          "Increased system performance by 40%",
+          "Successfully delivered 15+ projects",
+          "Mentored 3 junior developers",
+          "Reduced deployment time by 60%"
+        ]
+      }
+    ]
+  },
   "testimonials": [],
   "contact": {
     "email": "rahulthakurhm@gmail.com",

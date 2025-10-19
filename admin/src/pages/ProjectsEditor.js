@@ -17,11 +17,11 @@ const ProjectsEditor = () => {
 
     const fetchProjectsContent = async () => {
         try {
-            const response = await api.get('/api/content/projects');
+            const response = await api.get('/content/projects');
             const data = response.data;
             
-            // Convert projects array and add IDs
-            const projectsArray = (data.projects || []).map((project, index) => ({
+            // Convert projects array and add IDs - API returns array directly
+            const projectsArray = (Array.isArray(data) ? data : []).map((project, index) => ({
                 id: project.id || Date.now() + index,
                 ...project
             }));
@@ -136,7 +136,7 @@ const ProjectsEditor = () => {
                 }))
             };
 
-            await api.put('/api/content/projects', projectsData);
+            await api.put('/content/projects', projectsData);
             toast.success('All projects saved successfully!');
         } catch (error) {
             console.error('Error saving projects:', error);

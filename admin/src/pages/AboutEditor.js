@@ -11,19 +11,23 @@ const AboutEditor = () => {
 
     const fetchAboutContent = async () => {
         try {
-            const response = await api.get('/api/content/about');
+            const response = await api.get('/content/about');
             const data = response.data;
             
-            // Set form values
+            // Set form values based on API response structure
             setValue('overview', data.overview || '');
             setValue('description', data.description || '');
-            setValue('name', data.personalInfo?.name || '');
-            setValue('experience', data.personalInfo?.experience || '');
-            setValue('location', data.personalInfo?.location || '');
-            setValue('availability', data.personalInfo?.availability || '');
-            setValue('degree', data.education?.degree || '');
-            setValue('university', data.education?.university || '');
-            setValue('graduationYear', data.education?.graduationYear || '');
+            setValue('name', data.details?.name || '');
+            setValue('experience', data.details?.experience || '');
+            setValue('location', data.details?.location || '');
+            setValue('availability', data.details?.availability || '');
+            
+            // Handle education array - take first entry
+            const firstEducation = data.education?.[0] || {};
+            setValue('degree', firstEducation.title || '');
+            setValue('university', firstEducation.institution || '');
+            setValue('graduationYear', firstEducation.period || '');
+            
             setValue('certifications', data.certifications?.join('\n') || '');
             setValue('strengths', data.keyStrengths?.map(s => `${s.title}: ${s.description}`).join('\n') || '');
             
@@ -55,22 +59,22 @@ const AboutEditor = () => {
             const aboutData = {
                 overview: data.overview,
                 description: data.description,
-                personalInfo: {
+                details: {
                     name: data.name,
                     experience: data.experience,
                     location: data.location,
                     availability: data.availability
                 },
-                education: {
-                    degree: data.degree,
-                    university: data.university,
-                    graduationYear: data.graduationYear
-                },
+                education: [{
+                    title: data.degree,
+                    institution: data.university,
+                    period: data.graduationYear
+                }],
                 certifications,
                 keyStrengths: strengthsArray
             };
 
-            await api.put('/api/content/about', aboutData);
+            await api.put('/content/about', aboutData);
             toast.success('About section updated successfully!');
         } catch (error) {
             console.error('Error updating about content:', error);

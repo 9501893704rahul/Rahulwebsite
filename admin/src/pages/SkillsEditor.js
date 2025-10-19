@@ -16,25 +16,30 @@ const SkillsEditor = () => {
 
     const fetchSkillsContent = async () => {
         try {
-            const response = await api.get('/api/content/skills');
+            console.log('Fetching skills content...');
+            const response = await api.get('/content/skills');
+            console.log('Skills API response:', response.data);
             const data = response.data;
             
-            // Convert skills object to array format
+            // Convert skills array to flat array format
             const skillsArray = [];
-            Object.keys(data).forEach(category => {
-                if (Array.isArray(data[category])) {
-                    data[category].forEach(skill => {
-                        skillsArray.push({
-                            id: Date.now() + Math.random(),
-                            category,
-                            name: skill.name,
-                            level: skill.level,
-                            percentage: skill.percentage || getLevelPercentage(skill.level)
+            if (Array.isArray(data)) {
+                data.forEach(categoryData => {
+                    if (categoryData.skills && Array.isArray(categoryData.skills)) {
+                        categoryData.skills.forEach(skill => {
+                            skillsArray.push({
+                                id: Date.now() + Math.random(),
+                                category: categoryData.category,
+                                name: skill.name,
+                                level: skill.proficiency,
+                                percentage: skill.level
+                            });
                         });
-                    });
-                }
-            });
+                    }
+                });
+            }
             
+            console.log('Processed skills array:', skillsArray);
             setSkills(skillsArray);
         } catch (error) {
             console.error('Error fetching skills content:', error);

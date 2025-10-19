@@ -13,11 +13,11 @@ const ExperienceEditor = () => {
 
     const fetchExperienceContent = async () => {
         try {
-            const response = await api.get('/api/content/experience');
+            const response = await api.get('/content/experience');
             const data = response.data;
             
-            // Convert experience array and add IDs
-            const experienceArray = (data.experiences || []).map((exp, index) => ({
+            // Convert experience array and add IDs - API returns array directly
+            const experienceArray = (Array.isArray(data) ? data : []).map((exp, index) => ({
                 id: exp.id || Date.now() + index,
                 ...exp
             }));
@@ -99,7 +99,7 @@ const ExperienceEditor = () => {
                 }))
             };
 
-            await api.put('/api/content/experience', experienceData);
+            await api.put('/content/experience', experienceData);
             toast.success('All experiences saved successfully!');
         } catch (error) {
             console.error('Error saving experiences:', error);
