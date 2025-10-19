@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@rahulthakur.dev",
+    "password": "$2a$10$QTWF8qt6Meg7mSg3GnhkZOTwHNq.cK93lylVPm0qHvG/xvZQQptm2",
+    "role": "admin"
+  }
+]

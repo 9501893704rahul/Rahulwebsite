@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "name": "Rahul Thakur",
+    "title": ".NET Angular Developer & AI Engineer",
+    "description": "Dynamic and results-driven developer with expertise in .NET technologies and Angular framework. Currently contributing to critical software solutions at IIT Mandi, delivering scalable and user-centric applications.",
+    "stats": {
+      "experience": 5,
+      "projects": "65",
+      "clients": 100
+    }
+  },
+  "about": {
+    "overview": "I am a passionate and experienced .NET Angular Developer with a strong background in full-stack development and AI engineering. With over 5 years of experience in the industry, I specialize in creating robust, scalable web applications using cutting-edge technologies.",
+    "details": {
+      "name": "Rahul Thakur",
+      "experience": "5+ Years",
+      "location": "India",
+      "availability": "Open to Opportunities"
+    },
+    "education": [
+      {
+        "title": "Bachelor's in Computer Science",
+        "institution": "University Name",
+        "period": "2015-2019"
+      },
+      {
+        "title": "Microsoft Certified Developer",
+        "institution": "Azure & .NET Technologies",
+        "period": ""
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Backend Development",
+      "icon": "fas fa-server",
+      "skills": [
+        {
+          "name": "ASP.NET Core",
+          "level": 95,
+          "proficiency": "Expert"
+        },
+        {
+          "name": "C#",
+          "level": 90,
+          "proficiency": "Expert"
+        },
+        {
+          "name": "Entity Framework",
+          "level": 85,
+          "proficiency": "Advanced"
+        },
+        {
+          "name": "Web API",
+          "level": 88,
+          "proficiency": "Advanced"
+        }
+      ]
+    },
+    {
+      "category": "Frontend Development",
+      "icon": "fas fa-laptop-code",
+      "skills": [
+        {
+          "name": "Angular",
+          "level": 92,
+          "proficiency": "Expert"
+        },
+        {
+          "name": "TypeScript",
+          "level": 88,
+          "proficiency": "Advanced"
+        },
+        {
+          "name": "HTML5/CSS3",
+          "level": 90,
+          "proficiency": "Expert"
+        },
+        {
+          "name": "JavaScript",
+          "level": 85,
+          "proficiency": "Advanced"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Test Project",
+      "description": "A test project",
+      "technologies": [
+        "React",
+        "Node.js"
+      ],
+      "image": "",
+      "link": "",
+      "github": ""
+    }
+  ],
+  "experience": [],
+  "testimonials": [],
+  "contact": {
+    "email": "rahulthakurhm@gmail.com",
+    "phone": "+919501893704",
+    "github": "https://github.com/9501893704rahul",
+    "linkedin": "",
+    "location": "India"
+  }
+}
